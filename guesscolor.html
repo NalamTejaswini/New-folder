@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           
+            
+            .upper{
+                background-color: cadetblue;
+                align-items: center;
+
+            }
+            h1{
+                margin-left: 40%;
+            }
+            .lower{
+                background-color: black;
+                height: 500px;
+                padding-top: 50px;
+
+            }
+            
+            .first-three{
+                height: 100px;
+                width:350px;
+                margin-left: 35%;
+                margin-bottom: 50px;
+                
+                
+                
+            }
+            .last-three{
+                height: 100px;
+                width:350px;
+                margin-left: 35%;
+            
+            }
+            #button-1{
+                background-color: rgb(38, 165, 108);
+                height: 100px;
+                width: 100px;
+                margin-right: 10px;
+                border-radius: 10px;
+            }
+            #button-2{
+                background-color: rgb(74, 38, 165);
+                height: 100px;
+                width: 100px;
+                margin-right: 10px;
+                border-radius: 10px;
+            }
+            #button-3{
+                background-color: rgb(165, 38, 65);
+                height: 100px;
+                width: 100px;
+                margin-right: 10px;
+                border-radius: 10px;
+            }
+            #button-4{
+                background-color: rgb(165, 38, 142);
+                height: 100px;
+                width: 100px;
+                margin-right: 10px;
+                border-radius: 10px;
+            }
+            #button-5{
+                background-color: rgb(165, 104, 38);
+                height: 100px;
+                width: 100px;
+                margin-right: 10px;
+                border-radius: 10px;
+            }
+            #button-6{
+                background-color: rgb(157, 165, 38);
+                height: 100px;
+                width: 100px;
+                margin-right: 10px;
+                border-radius: 10px;
+            }
+            .text-class{
+                margin-top: 30px;
+                margin-left: 35%;
+                color: white;
+                font-size: medium;
+            }
+           
+            h1{
+                margin-left: 6%;
+            }
+            span{
+                padding-left: 15px;
+            }
+            /*.retry{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 5px;
+                margin-left: 43%;
+                background-color: rgb(0, 128, 66);
+            }*/
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="upper">
+                <h1 style="margin-left: 40%;">   THE GREAT  </h1>
+                <h1 style="margin-left: 38%;">RGB(38,165,108)</h1>
+                <h1 style="margin-left: 36%;"> GUESSING GAME</h1>
+            </div>
+            <div class="lower">
+                <div class="first-three">
+                    <button id="button-1"  ></button>
+                    <button id="button-2"></button>
+                    <button id="button-3"></button>
+                </div>
+                <div class="last-three">
+                    <button id="button-4"></button>
+                    <button id="button-5"></button>
+                    <button id="button-6"></button>
+                </div>
+                <div class="text-class">
+                    <h1>Total Chances:<span id="demo">3</span></h1>
+                    <h1>Total score:<span id="demo1">0</span></h1>
+                </div>
+                <!--<div><button class="retry">Retry</button></div>-->
+
+            </div>
+        </div>
+        <script>
+            var chances=3;
+            var score=0;
+            var btn1=document.getElementById('button-1');
+            var btn2=document.getElementById("button-2");
+            var btn3=document.getElementById("button-3");
+            var btn4=document.getElementById("button-4");
+            var btn5=document.getElementById("button-5");
+            var btn6=document.getElementById("button-6");
+            let total=document.getElementById('demo1');
+            let chance=document.getElementById('demo');
+            var retr=document.getElementsByClassName('retry');
+            btn1.addEventListener("click",()=>{
+                score++;
+                total.innerHTML=score;
+            })
+           
+            btn2.addEventListener("click",()=>{
+                chances--;
+                chance.innerHTML=chances;
+                myfunction();
+            })
+            btn3.addEventListener("click",()=>{
+                chances--;
+                chance.innerHTML=chances;
+                myfunction();
+            })
+            btn4.addEventListener("click",()=>{
+                chances--;
+                chance.innerHTML=chances;
+                myfunction();
+            })
+            btn5.addEventListener("click",()=>{
+                chances--;
+                chance.innerHTML=chances;
+                myfunction();
+            })
+            btn6.addEventListener("click",()=>{
+                chances--;
+                chance.innerHTML=chances;
+                myfunction();
+            })
+            function myfunction(){
+            if(chances===0){
+                alert("You lost the game,play again");
+                score=0;
+                chances=3;
+                total.innerHTML=score;
+                chance.innerHTML=chances;
+
+            }
+            }
+            /*retr.addEventListener("click",()=>{
+                score=0;
+                chances=3;
+                total.innerHTML=score;
+                chance.innerHTML=chances;
+            })*/
+            
+
+
+
+            
+        </script>
+    </body>
+</html>
